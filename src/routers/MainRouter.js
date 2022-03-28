@@ -1,16 +1,11 @@
 import React from "react";
 import { DashboardRoutes } from "./DashBoardRoutes";
 import { Header } from "../components/Header";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  MemoryRouter,
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 export const MainRouter = () => {
   return (
     <>
-      <MemoryRouter>
+      <Router basename="/test">
         <Header></Header>
 
         <div>
@@ -18,7 +13,7 @@ export const MainRouter = () => {
             <Route path="/" component={DashboardRoutes} />
           </Switch>
         </div>
-      </MemoryRouter>
+      </Router>
     </>
   );
 };
