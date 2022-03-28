@@ -1,0 +1,53 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+  font-size: 1.3rem;
+  width: 100%;
+  color: grey;
+}
+
+.card-grid {
+  width: 250px;
+  justify-content: flex-start;
+  margin: 50px;
+}
+.card-grid .card-content {
+  flex-wrap:  wrap;
+}
+.title {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.social {
+  padding-left: 10;
+  justify-items: baseline;
+  justify-content: space-between;
+}
+
+.card2 {
+  display: flex;
+  align-content: stretch;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-left: 40px;
+}
+
+cc {
+  margin-top: 10%;
+  text-align: center;
+}
+
+.wrap {
+  max-height: 450px;
+  display: flex;
+}
+
+.css-1r6wr4n {
+  flex-wrap: wrap;
+}
