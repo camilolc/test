@@ -14,7 +14,7 @@ input {
   margin: 50px;
 }
 .card-grid .card-content {
-  flex-wrap:  wrap;
+  flex-wrap: wrap;
 }
 .title {
   display: flex;
@@ -38,16 +38,84 @@ input {
   margin-left: 40px;
 }
 
-cc {
-  margin-top: 10%;
-  text-align: center;
-}
-
-.wrap {
-  max-height: 450px;
-  display: flex;
-}
-
 .css-1r6wr4n {
   flex-wrap: wrap;
 }
+.conoce .carousel .slider-wrapper {
+  overflow: hidden;
+  margin: auto;
+  width: 35%;
+  border: 3px solid #d98430;
+  border-radius: 10px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.conoce .carousel .slider img.uno {
+  max-height: 300px;
+}
+
+.conoce .carousel .slider {
+  cursor: grab;
+}
+.conoce .carousel .slider:active {
+  cursor: grabbing;
+}
+
+.carousel .slider img.dos {
+  max-height: 300px;
+}
+
+.carousel .slider img {
+  max-height: 700px;
+}
+.carousel .slide p.legend {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  margin-left: -45%;
+  width: 90%;
+  border-radius: 10px;
+  background: rgb(126, 121, 121);
+  color: rgb(248, 246, 246);
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+  opacity: 0.25;
+  transition: opacity 0.35s ease-in-out;
+}
+
+.carousel .slide p.legend:hover {
+  display: inline-block;
+
+  animation: flash; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s;
+}
+
+.logo-animate:hover {
+  display: inline-block;
+
+  animation: rubberBand; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s;
+}
+
+.logo-social:hover {
+  display: inline-block;
+
+  animation: heartBeat; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s;
+}
+
+.titulo-conoce {
+  text-align: center;
+  background: linear-gradient(90deg, #d98430, #f79a0e);
+  color: white;
+  font-size: 40px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-family: Latin Modern Roman;
+}
+
+
+
+

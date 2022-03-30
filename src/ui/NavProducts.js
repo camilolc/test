@@ -43,12 +43,12 @@ export const NavProductos = () => {
         >
           <nav display="flex" flex="1" justify-content="space-around">
             <IconButton
-              sx={{ flexDirection: "column" }}
+              sx={{ flexDirection: "column", borderRadius: "0px" }}
               onClick={() => setCat("Todo")}
             >
               <img
-                src="https://img.icons8.com/color/100/000000/grocery-store.png"
-                alt="Todos los Productos"
+                src="https://res.cloudinary.com/canaclc/image/upload/c_scale,w_58/v1648602791/induimages/tienda_qdqnhd.png"
+                alt="Productos"
               />
 
               <Typography
@@ -57,16 +57,16 @@ export const NavProductos = () => {
                 component="div"
                 color="white"
               >
-                Todos los Productos
+                Productos
               </Typography>
             </IconButton>
 
             <IconButton
-              sx={{ flexDirection: "column" }}
+              sx={{ flexDirection: "column", borderRadius: "0px" }}
               onClick={() => setCat("bolsas")}
             >
               <img
-                src="https://img.icons8.com/color/100/000000/wallpaper-roll.png"
+                src="https://res.cloudinary.com/canaclc/image/upload/c_scale,w_58/v1648602509/induimages/bolsa-de-papel_pgguqp.png"
                 alt="Bolsas"
               />
 
@@ -81,11 +81,11 @@ export const NavProductos = () => {
             </IconButton>
 
             <IconButton
-              sx={{ flexDirection: "column" }}
+              sx={{ flexDirection: "column", borderRadius: "0px" }}
               onClick={() => setCat("papel")}
             >
               <img
-                src="https://img.icons8.com/color/100/000000/sheet-of-paper.png"
+                src="https://res.cloudinary.com/canaclc/image/upload/c_scale,w_58/v1648602283/induimages/papel-de-aluminio_exs9so.png"
                 alt="Papel"
               />
               <Typography
@@ -98,11 +98,11 @@ export const NavProductos = () => {
               </Typography>
             </IconButton>
             <IconButton
-              sx={{ flexDirection: "column" }}
+              sx={{ flexDirection: "column", borderRadius: "0px" }}
               onClick={() => setCat("vasos")}
             >
               <img
-                src="https://img.icons8.com/dusk/100/000000/solo-cup.png"
+                src="https://res.cloudinary.com/canaclc/image/upload/c_scale,w_58/v1648602617/induimages/vaso-de-plastico_c09bev.png"
                 alt="Vasos"
               />
               <Typography

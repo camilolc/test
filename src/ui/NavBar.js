@@ -9,7 +9,11 @@ export const NavBar = () => {
       <AppBar position="relative">
         <Toolbar
           variant="dense"
-          style={{ justifyContent: "space-around", backgroundColor: "#D98430" }}
+          style={{
+            justifyContent: "space-around",
+            backgroundColor: "#D98430",
+            overflow: "hidden",
+          }}
         >
           <nav>
             <Button variant="primary">
@@ -54,7 +58,7 @@ export const NavBar = () => {
                 exact
                 to="/acercade"
               >
-                Acerca de nosotros
+                Quienes somos
               </NavLink>
             </Button>
             <Button variant="primary">

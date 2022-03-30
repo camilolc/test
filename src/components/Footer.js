@@ -17,7 +17,7 @@ export default function Footer() {
                 Indubolsas popayán - Los mejores precios
               </Box>
               <img
-                src="https://res.cloudinary.com/canaclc/image/upload/c_scale,h_148/v1647635284/induimages/icono_pvnqcy.png"
+                src="https://res.cloudinary.com/canaclc/image/upload/c_scale,h_148/v1648585692/induimages/icono_cagsqo.png"
                 alt=""
               ></img>
             </Grid>

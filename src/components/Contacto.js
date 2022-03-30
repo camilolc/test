@@ -25,8 +25,13 @@ export const Contacto = () => {
       >
         Formulario de contacto
       </Typography>
-      <div style={{ display: "center" }}>
-        <Grid marginBottom={10} bgcolor="#D98430">
+      <div
+        style={{
+          display: "center",
+          background: "linear-gradient(90deg,  #d98430, #f79a0e)",
+        }}
+      >
+        <Grid marginBottom={10}>
           <Card
             style={{
               maxWidth: 450,
