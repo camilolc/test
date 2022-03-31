@@ -8,17 +8,32 @@ import {
   Button,
   Typography,
   Snackbar,
+  FormControl,
+  InputLabel,
+  Select,
+  MenuItem,
+  Box,
 } from "@mui/material";
 import { AddCartContext } from "./AddCartContext";
 import "../index.css";
 export const Tarjetas = (data) => {
+  //Select
+
+  const [age, setAge] = useState([]);
+
+  const handleChange = (event) => {
+    console.log("event", event.target.value);
+    setAge(event.target.value);
+  };
+
   //Referencia
   const ref = () => {
     let d = [];
     if (data !== undefined) {
       const { size } = data;
 
-      d = size.map(({ referencia, Precio }) => [referencia, Precio]);
+      // d = size.map(({ referencia, Precio }) => [referencia, Precio]);
+      d = size.map((data) => data);
     }
     return d;
   };
@@ -41,7 +56,7 @@ export const Tarjetas = (data) => {
           name: data.name,
           url: data.url,
           // price: data.price,
-          size: data.size,
+          size: age.length === 0 ? data.size[0] : age,
         },
       ]
       // .filter((data) =>
@@ -52,6 +67,7 @@ export const Tarjetas = (data) => {
     setState({ open: true, vertical: "top", horizontal: "center" });
   };
 
+  console.log("add", addCart);
   const handleClose = () => {
     setState({ ...state, open: false });
   };
@@ -62,6 +78,7 @@ export const Tarjetas = (data) => {
       minimumFractionDigits: 2,
     });
   };
+
   return (
     <>
       <Card className="card-grid  animate__animated animate__bounceInRight ">
@@ -72,22 +89,36 @@ export const Tarjetas = (data) => {
           alt="Producto"
         />
         <CardContent style={{ flexWrap: "wrap" }}>
-          {ref().map((data, index) => (
-            <Typography
-              key={index}
-              gutterBottom
-              variant="caption"
-              component="div"
-            >
-              Medida: {data[0]}, Precio: {formatoMoneda(data[1])}
-            </Typography>
-          ))}
-
+          <Box sx={{ minWidth: 100 }}>
+            <FormControl fullWidth variant="filled">
+              <InputLabel id="demo-simple-select-label">Referencias</InputLabel>
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                defaultValue={""}
+                label="Age"
+                onChange={handleChange}
+              >
+                {ref().map((data, index) => (
+                  <MenuItem
+                    key={index}
+                    value={data}
+                    // value={[data[0], data[1]]}
+                  >
+                    Medida: {data.referencia}, Precio: {data.Precio}
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+          </Box>
           <Typography gutterBottom variant="h6" component="div">
-            {data.name} {ref()[0][0]}
+            {data.name}{" "}
+            {age.length === 0 ? ref()[0].referencia : age.referencia}
           </Typography>
           <Typography variant="h5" color="blue">
-            {formatoMoneda(ref()[0][1])}
+            {age.length === 0
+              ? formatoMoneda(ref()[0].Precio)
+              : formatoMoneda(age.Precio)}
           </Typography>
         </CardContent>
         <CardActions
@@ -137,3 +168,14 @@ export const Tarjetas = (data) => {
     </>
   );
 };
+
+// {ref().map((data, index) => (
+//   <Typography
+//     key={index}
+//     gutterBottom
+//     variant="caption"
+//     component="div"
+//   >
+//     Medida: {data[0]}, Precio: {formatoMoneda(data[1])}
+//   </Typography>
+// ))}

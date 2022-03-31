@@ -26,8 +26,12 @@ export const Carrito = (data) => {
         contador +
         "=" +
         addCart[i]?.name +
+        ", " +
+        "Referencia:" +
+        addCart[i]?.size.referencia +
+        ", " +
         " Precio:$" +
-        addCart[i]?.size[0].Precio +
+        addCart[i]?.size.Precio +
         " |";
     }
 
@@ -48,7 +52,7 @@ export const Carrito = (data) => {
   };
   const total = () => {
     let precio = 0;
-    precio = addCart.map((data) => data.size[0].Precio);
+    precio = addCart.map((data) => data.size.Precio);
 
     return precio.reduce((a, b) => a + b, 0);
   };
@@ -84,23 +88,16 @@ export const Carrito = (data) => {
                     alt="Producto"
                   />
                   <CardContent>
-                    {data.size.map((info, index2) => (
-                      <Typography
-                        key={index2}
-                        gutterBottom
-                        variant="caption"
-                        component="div"
-                      >
-                        Medida: {info.referencia}, Precio:{" "}
-                        {formatoMoneda(info.Precio)}
-                      </Typography>
-                    ))}
+                    <Typography gutterBottom variant="caption" component="div">
+                      Medida: {data.size.referencia}, Precio:{" "}
+                      {formatoMoneda(data.size.Precio)}
+                    </Typography>
 
                     <Typography gutterBottom variant="h6" component="div">
-                      {data.name} {data.size[0].referencia}
+                      {data.name} {data.size.referencia}
                     </Typography>
                     <Typography variant="h5" color="blue">
-                      {formatoMoneda(data.size[0].Precio)}
+                      {formatoMoneda(data.size.Precio)}
                     </Typography>
                   </CardContent>
                   <CardActions
